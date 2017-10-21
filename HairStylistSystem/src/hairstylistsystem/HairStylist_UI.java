@@ -1,6 +1,8 @@
 package hairstylistsystem;
 
 import hairstylistsystem.profile.Profile;
+import java.util.ArrayList;
+import java.util.List;
 
 import java.util.Scanner;
 
@@ -8,10 +10,11 @@ public class HairStylist_UI {
 
     Scanner StartDecision = new Scanner(System.in);
 
-    private Profile[] profiles;
+    private profile[] profiles;
 
     public HairStylist_UI() {
-        profiles = new Profile[20];
+        //profiles = new profile[20];
+        List<profile> profiles = new ArrayList<>();
 
     }
 
@@ -29,14 +32,18 @@ public class HairStylist_UI {
     void CreateAccount() {
 
     }
-    
-    void openReviews(){
-    profiles[0].reviews.
+
+    void addToReviews() {
+        
+    }
+
+    void openReviews() {
+        profiles[0].reviews.printReviews();
     }
 
     public void StartSystem() {
         DisplayWelcomeScreen();
-        
+
     }
 
 }

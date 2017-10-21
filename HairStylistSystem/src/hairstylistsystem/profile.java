@@ -24,8 +24,9 @@ public class profile {
     boolean BAN;
     boolean BanReview;
     Reviews reviews;
+    int profileNum;
 
-    public profile(String firstName, String lastName, String MONTH, String DAY, String YEAR, String USERNAME, String Password, String IDNUM_ASSIGNMENT) {
+    public profile(String firstName, String lastName, String MONTH, String DAY, String YEAR, String USERNAME, String Password, String IDNUM_ASSIGNMENT,int profileNum) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.MONTH = MONTH;
@@ -38,6 +39,7 @@ public class profile {
         BAN = false;
         BanReview = false;
         reviews = new Reviews();
+        this.profileNum = profileNum; 
 
         if (Integer.parseInt(IDNUM_ASSIGNMENT) == 0) { //0 means ID NUMBER is a CustomerProfile.
             SYSTEM_ID_NUMBER = "0 - " + Double.toString(ID_NUMBER);
